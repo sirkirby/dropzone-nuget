@@ -1,4 +1,8 @@
-dropzone-nuget
+DropzoneJS
 ==============
 
-dropzone js nuget package
+Nuget package for DropzoneJS
+
+Installing
+----------
+`PM> install-package dropzone`
