@@ -1044,7 +1044,7 @@ Emitter.prototype.hasListeners = function(event){
 
     Dropzone.prototype._processThumbnailQueue = function() {
       var _this = this;
-      if (this._processingThumbnail) {
+      if (this._processingThumbnail || this._thumbnailQueue.length === 0) {
         return;
       }
       this._processingThumbnail = true;
@@ -1382,7 +1382,7 @@ Emitter.prototype.hasListeners = function(event){
 
   })(Em);
 
-  Dropzone.version = "3.8.1";
+  Dropzone.version = "3.8.2";
 
   Dropzone.options = {};
 
