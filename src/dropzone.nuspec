@@ -2,29 +2,27 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>dropzone</id>
-        <version>3.10.2</version>
+        <version>4.0.0</version>
         <title>DropzoneJS</title>
         <authors>Matias Meno</authors>
         <owners>sirkirby</owners>
         <projectUrl>http://www.dropzonejs.com/</projectUrl>
-        <iconUrl>http://www.dropzonejs.com/images/logo.png</iconUrl>
+        <iconUrl>https://raw.githubusercontent.com/sirkirby/dropzone-nuget/master/pkg-logo.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>DropzoneJS is an open source library that provides drag'n'drop file uploads with image previews. Issues? Please post them here https://github.com/sirkirby/dropzone-nuget/issues</description>
+        <description>DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews. Issues? Please post them here https://github.com/sirkirby/dropzone-nuget/issues</description>
         <releaseNotes>- latest source release.
 
 https://github.com/enyo/dropzone/releases</releaseNotes>
         <tags>dropzone file image upload dragndrop</tags>
     </metadata>
     <files>
-        <file src="css\stylus\basic.styl" target="content\Scripts\dropzone\css\stylus\basic.styl" />
-        <file src="css\stylus\dropzone.styl" target="content\Scripts\dropzone\css\stylus\dropzone.styl" />
-        <file src="css\basic.css" target="content\Scripts\dropzone\css\basic.css" />
-        <file src="css\dropzone.css" target="content\Scripts\dropzone\css\dropzone.css" />
-        <file src="images\spritemap.png" target="content\Scripts\dropzone\images\spritemap.png" />
-        <file src="images\spritemap@2x.png" target="content\Scripts\dropzone\images\spritemap@2x.png" />
+        <file src="basic.css" target="content\Scripts\dropzone\basic.css" />
+        <file src="basic.min.css" target="content\Scripts\dropzone\basic.min.css" />
         <file src="dropzone-amd-module.js" target="content\Scripts\dropzone\dropzone-amd-module.js" />
         <file src="dropzone-amd-module.min.js" target="content\Scripts\dropzone\dropzone-amd-module.min.js" />
+        <file src="dropzone.css" target="content\Scripts\dropzone\dropzone.css" />
         <file src="dropzone.js" target="content\Scripts\dropzone\dropzone.js" />
+        <file src="dropzone.min.css" target="content\Scripts\dropzone\dropzone.min.css" />
         <file src="dropzone.min.js" target="content\Scripts\dropzone\dropzone.min.js" />
     </files>
 </package>
