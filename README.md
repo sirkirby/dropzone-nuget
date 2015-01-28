@@ -29,9 +29,9 @@ Main script
 
 Styles for basic and dropzone themes
 
-    bundles.Add(new StyleBundle("~/Scripts/dropzone/css/basic").Include("~/Scripts/dropzone/css/basic.css"));
+    bundles.Add(new StyleBundle("~/Scripts/dropzone/css/basic").Include("~/Scripts/dropzone/basic.css"));
 
-    bundles.Add(new StyleBundle("~/Scripts/dropzone/css/standard").Include("~/Scripts/dropzone/css/dropzone.css"));
+    bundles.Add(new StyleBundle("~/Scripts/dropzone/css/standard").Include("~/Scripts/dropzone/dropzone.css"));
 
 [License](LICENSE.txt)
 ==================
