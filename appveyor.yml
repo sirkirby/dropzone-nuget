@@ -1,0 +1,31 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+install:
+- cmd: >-
+    choco install nuget.commandline -y
+
+    npm i -g grunt-cli
+
+    npm install
+cache: node_modules
+build_script:
+- cmd: grunt
+artifacts:
+- path: dist/*.nupkg
+  name: package
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/sirkirby/api/v2/package
+  api_key:
+    secure: IWZGoO22i63NbW9cQvemJIEVo8nTkXfNgG+Kh+bTUiHMQ0330Xip2lKVBs3mfcPM
+  skip_symbols: true
+  artifact: package
+  on:
+    branch: /master/
+notifications:
+- provider: Slack
+  incoming_webhook:
+    secure: 5djSDMGtWC1bHLUsSkGVBnE+l4P/NRftr3Ifd8LHE/0QyqJgZNmPygkodNfYxd8JW3M4VeVKuMbn2RCB9bWLtTVOKZ1KCn96Zuvf2UYWdN8=
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: true

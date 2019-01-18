@@ -17,11 +17,17 @@ module.exports = function(grunt) {
     },
     nugetpush: {
       dist: {
-        src: 'dist/*.nupkg'
+        src: 'dist/*.nupkg',
+        options: {
+          source: grunt.option('source'),
+          apiKey: grunt.option('key')
+        }
       }
     }  
   });
-
+  var source = grunt.option("source") || "https://www.myget.org/F/sirkirby/api/v2/package";
+  var key = grunt.option('key');
+  
   grunt.loadNpmTasks('grunt-contrib-clean');
 
   // load the shell plugin for cmd goodies
