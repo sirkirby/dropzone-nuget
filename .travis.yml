@@ -3,6 +3,7 @@ cache:
   directories:
     - node_modules
 before_script:
+- sudo apt-get install mono-complete
 - npm install -g grunt-cli
 - npm install
 script: 
