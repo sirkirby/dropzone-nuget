@@ -1,9 +1,18 @@
 language: node_js
+cache:
+  directories:
+    - node_modules
 before_script:
-  - npm install -g grunt-cli
-  - sudo apt-get install mono-complete
-script: grunt
+- npm install -g grunt-cli
+- npm install
+script: 
+- grunt
+- grunt publish --key:$APIKEY
+env:
+  global:
+    secure: eJ0zPNvl/08O5bpzTmo7eCVnuC+jTXImBdZwSN9wHWGbCqgM1BMX8c5g16p9IH1hGz4BcAHQ33Zk4uDoeC2NbhzYnCx37ynXOqr8dsIr8JpcEVWL6aY7m8qxRYgIAezLDfzkZpErrYH/lrASclbwDw5KiTrOspqKvtpsDxHE2ag=
 notifications:
-- slack:
-    secure: hXWO4iKYjAdJR0qUuV2c/pwRdkIs9KGOohSV0j5deUp6BEaoiJfxlPDCZvyeQN6RnbFHqe5c1xddTMzdITx7t7zWbRTmoIbsTLA7f1zRZylA89nbBNso65pC3l6rwjhCLvIze84TV2dmrTKIPyR/Rw35apAr8rSS3oyEYotpFtg=
-- email: false
+  email: false
+  slack:
+    rooms:
+      secure: VI6zwPEUQnn7/KodnHxI32LaSRrcijZFz/fvgJIrMHweWwGa2TkNvr8WbZ4zJ5zo9B+xlM7gi5TSBLii5OjGNlxLAj2Zf8VM2yx5vKQtECz4hhzE//bO/y/zpbJFc4iYvTt1ZLbpAPrBkHmxvMf94ankOSroPRy21Zt5mU4vDZk=
